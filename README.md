@@ -1,5 +1,11 @@
-electron-boilerplate
+lookatmenow
 ==============
+
+Details to follow
+
+
+# README from electron-boilerplate
+
 Comprehensive boilerplate application for [Electron runtime](http://electron.atom.io).  
 
 Scope of this project:

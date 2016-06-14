@@ -16,9 +16,20 @@ var appDir = jetpack.cwd(app.getAppPath());
 // Holy crap! This is browser window with HTML and stuff, but I can read
 // here files like it is node.js! Welcome to Electron world :)
 console.log('The author of this app is:', appDir.read('package.json', 'json').author);
+// console.log(appDir.list('seed_images'))
+
+function getPicture() {
+	// console.log(appDir);
+	var images = appDir.list('seed_images');
+	console.log(images);
+
+	return '<img src="seed_images\\'+images[0]+'" width=""></img>';
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('greet').innerHTML = greet();
-    document.getElementById('platform-info').innerHTML = os.platform();
-    document.getElementById('env-name').innerHTML = env.name;
+	console.log(getPicture());
+	document.getElementById('picture').innerHTML = getPicture();
+    // document.getElementById('greet').innerHTML = greet();
+    // document.getElementById('platform-info').innerHTML = os.platform();
+    // document.getElementById('env-name').innerHTML = env.name;
 });
